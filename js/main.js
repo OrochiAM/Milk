@@ -10,19 +10,27 @@ tl.to('.milk', {
     '.milk-wave',
     {
       xPercent: -50,
-      duration: 2.5,
+      duration: 2,
       ease: 'none',
     },
     '<',
   )
-  .set('.milk-wave', {
-    xPercent: 0,
-  })
-  .to('.milk-wave', {
-    xPercent: -50,
-    duration: 2.5,
-    ease: 'none',
-  });
+  .set(
+    '.milk-wave',
+    {
+      xPercent: 0,
+    },
+    2,
+  )
+  .to(
+    '.milk-wave',
+    {
+      xPercent: -50,
+      duration: 2,
+      ease: 'none',
+    },
+    2,
+  );
 
 const playSounds = () => {
   const moo = new Audio('audio/cow-moo.mp3');
